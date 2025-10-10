@@ -1,1 +1,34 @@
 hi good night 
+today i will adding one variable into this repo
+# adding the user permission in policy 
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "KinesisAnalyticsAccess",
+      "Effect": "Allow",
+      "Action": [
+        "kinesisanalytics:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3Access",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:ListBucket"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchAccess",
+      "Effect": "Allow",
+      "Action": [
+        "logs:*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
