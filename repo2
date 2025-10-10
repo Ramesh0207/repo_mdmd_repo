@@ -1,2 +1,12 @@
 hlo ho sdhbfg
 ok now i starting the new start learning the git hub action 
+i am creatign user in the iam 
+from pyflink.datastream import StreamExecutionEnvironment
+
+env = StreamExecutionEnvironment.get_execution_environment()
+ds = env.from_collection(["apple", "banana", "apple", "orange"])
+ds.map(lambda x: (x, 1)).key_by(lambda x: x[0]).sum(1).print()
+
+env.execute("WordCountExample")
+#Upload your code to S3
+aws s3 cp flink_job.py s3://my-flink-bucket/code/flink_job.py
